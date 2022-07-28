@@ -6,36 +6,12 @@ body {
     font-size: 16px;
     display: grid;
     font-family: 'Open Sans', sans-serif;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .label-standard {
     display: block;
     padding-bottom: 3px;
-    /* margin-block: 0.125rem; */
-}
-
-/* #ime.firstname {
-    display: "REQUIRED";
-}
-
-.ime[data-error] .firstname {
-    border-color: red;
-    color: #c92432;
-    background: #fffafa;
-}
-
-.ime[data-error]::after {
-    content: attr(data-error);
-} */
-
-.err {
-    color: red;
-    text-transform: uppercase;
-    font-size: 12px;
-    display: block;
-    margin-top: 3px;
-    margin-left: 5px;
 }
 
 input {
@@ -63,7 +39,8 @@ input:invalid {
     background-size: 20px;
 }
 
-#firstname, #lastname {
+#firstname,
+#lastname {
     background-image: url(name.png);
     background-position: 4px 2px;
     background-repeat: no-repeat;
@@ -101,4 +78,3 @@ input:invalid {
     cursor: pointer;
     color: tomato;
 }
-  
