@@ -9,19 +9,106 @@ body {
     justify-content: center;
 }
 
+form {
+    max-width: 450px;
+}
+
 .label-standard {
     display: block;
     padding-bottom: 3px;
 }
 
+form>div>input[type="email"],
+form>div>input[type="text"],
+form>div>input[type="tel"] {
+    width: 100%;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+}
+
+form>div>input[type="email"]:focus,
+form>div>input[type="text"]:focus,
+form>div>input[type="tel"]:focus {
+    outline: 0;
+    background: white;
+}
+
+
+form>div>input[type="email"]:valid,
+form>div>input[type="text"]:valid,
+form>div>input[type="tel"]:valid {
+    background: url('https://webdevtrick.com/wp-content/uploads/check-icon.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 424px 4px;
+    border-color: rgb(119, 234, 173);
+    border-width: 2px;
+}
+
+form>div>input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+form>div>input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) {
+    background: url('https://webdevtrick.com/wp-content/uploads/xicon.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 424px 4px;
+    border-color: rgb(225, 80, 80);
+    border-width: 2px;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid+.requirements,
+input:placeholder-shown:focus+.requirements+.isEmpty,
+input:placeholder-shown:focus:invalid+.isEmpty
+
+/*last name i address*/
+    {
+    display: block;
+    margin-top: 5px;
+    max-height: 200px;
+    padding: 5px 30px 5px 20px;
+    border-top: 1px dashed black;
+    background-color: whitesmoke;
+}
+
+/* form .isEmpty {
+    display: none;
+}
+
+form:invalid .isEmpty {
+    display: block;
+} */
+
+/* form>div>input[type="email"]:invalid:not(:focus):placeholder-shown~.isEmpty {
+    margin-top: 5px;
+    max-height: 200px;
+    padding: 5px 30px 5px 50px;
+    border-top: 1px dashed black;
+    background-color: whitesmoke;
+} */
+
+form div>.requirements,
+form div>.isEmpty {
+    /* padding: 0 30px 0 50px; */
+    color: rgb(225, 80, 80);
+    max-height: 0;
+    transition: 0.25s;
+    overflow: hidden;
+    /* font-style: italic; */
+    font-size: 0.8em;
+}
+
 input {
     font-size: 16px;
-    width: 500px;
-    height: 30px;
     text-align: center;
-    border: 1px solid grey;
     border-radius: 10px;
+    height: 30px;
 }
+
+/* 
+input:placeholder-shown:not(:focus):invalid {
+    border: 1px solid firebrick;
+} */
+
+/* 
 
 input:required:valid {
     border-color: green;
@@ -30,13 +117,13 @@ input:required:valid {
 
 input:not(:placeholder-shown):invalid {
     border-color: red;
-}
+} */
 
 /* input:invalid {
     border-color: red;
 } */
 
-#email {
+/* #email {
     background-image: url(email.png);
     background-position: 4px 2px;
     background-repeat: no-repeat;
@@ -69,16 +156,28 @@ input:not(:placeholder-shown):invalid {
     width: auto;
     height: auto;
     cursor: pointer;
-}
+} */
+
 
 .button {
     background-color: blue;
     color: white;
     width: 70px;
     height: 30px;
+    margin-top: 10px;
 }
 
 .button:hover {
     cursor: pointer;
     color: tomato;
 }
+
+/* 
+form:invalid [type="submit"] {
+    background-color: blue;
+    cursor: not-allowed;
+}
+
+form:invalid [type="submit"]:active {
+    pointer-events: none;
+} */

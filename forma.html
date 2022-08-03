@@ -14,52 +14,54 @@
 </head>
 
 <body>
-    <fieldset>
-        <form action="saveform.html" method="POST">
-            <p class="field">
-                <label for="email" class="label-standard">Email address</label>
-                <input type="email" id="email" name="email" minlength="1" placeholder="abc123@email.com"
-                    pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" required
-                    oninvalid="this.value ? this.setCustomValidity('BAD FORMAT! Please enter a valid email address. Example: abc123@email.com') : this.setCustomValidity('Required field')"
-                    oninput="this.setCustomValidity('')" />
-            </p>
+    <form autocomplete="off">
+        <div>
+            <label for="email" class="label-standard">Email address</label>
+            <input type="email" id="email" name="email" minlength="1" placeholder="abc123@email.com"
+                pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9]{2,4}" required />
+            <div class="requirements">BAD FORMAT! Please enter a valid email address. Example: abc123@email.com</div>
+            <div class="isEmpty">REQUIRED</div>
+        </div>
 
-            <!-- pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"  -->
+        <!-- pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]{2,}" -->
+        <!-- pattern="[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z0-9]{2,3}" -->
 
-            <p class="field">
-                <label for="firstname" class="label-standard">First name</label>
-                <input type="text" id="firstname" name="firstname" minlength="1" placeholder="First name" required
-                    oninvalid="this.setCustomValidity ('Required field')" oninput="this.setCustomValidity('')" />
-            </p>
+        <!-- pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"  -->
 
-            <p class="field">
-                <label for="lastname" class="label-standard">Last name</label>
-                <input type="text" id="lastname" name="firstname" minlength="1" placeholder="Last name" required
-                    oninvalid="this.setCustomValidity ('Required field')" oninput="this.setCustomValidity('')" />
-            </p>
+        <div>
+            <label for="firstname" class="label-standard">First name</label>
+            <input type="text" id="firstname" name="firstname" minlength="1" placeholder="First name" required>
+            <div class="requirements">REQUIRED</div>
+            <div class="isEmpty">REQUIRED</div>
+        </div>
 
-            <p class="field">
-                <label for="address" class="label-standard">Address</label>
-                <input type="text" id="address" name="address" minlength="1" placeholder="Street Address" required
-                    oninvalid="this.setCustomValidity ('Required field')" oninput="this.setCustomValidity('')" />
-            </p>
+        <div>
+            <label for="lastname" class="label-standard">Last name</label>
+            <input type="text" id="lastname" name="firstname" minlength="1" placeholder="Last name" required>
+            <div class="isEmpty">REQUIRED</div>
+        </div>
 
-            <p class="field">
-                <label for="phone" class="label-standard">Phone number</label>
-                <input type="tel" id="phone" name="phone" placeholder="+0000000000" pattern="\+[0-9]{10}" required
-                    oninvalid="this.value ? this.setCustomValidity('BAD FORMAT! Please enter your number in format: +0123456789') : this.setCustomValidity('Required field')"
-                    oninput="this.setCustomValidity('')" />
-            </p>
+        <div>
+            <label for="address" class="label-standard">Address</label>
+            <input type="text" id="address" name="address" minlength="1" placeholder="Street Address" required>
+            <div class="isEmpty">REQUIRED</div>
+        </div>
 
-            <p>
-                <label for="signup">Sign me up for annoying offers</label>
-                <input type="checkbox" id="signup" name="signup" required />
-            </p>
-            <p>
-                <button type="submit" class="button">Save</button>
-            </p>
-        </form>
-    </fieldset>
+        <div>
+            <label for="phone" class="label-standard">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+0000000000" pattern="\+[0-9]{10}" required>
+            <div class="requirements">BAD FORMAT! Please enter your number in format: +0123456789</div>
+            <div class="isEmpty">REQUIRED</div>
+        </div>
+
+        <div>
+            <label for="signup">Sign me up for annoying offers</label>
+            <input type="checkbox" id="signup" name="signup" required title="hehee" />
+        </div>
+        <div>
+            <button type="submit" class="button">Save</button>
+        </div>
+    </form>
 </body>
 
 </html>
