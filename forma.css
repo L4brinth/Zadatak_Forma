@@ -14,6 +14,7 @@ form {
 }
 
 .label-standard {
+    margin-top: 10px;
     display: block;
     padding-bottom: 3px;
 }
@@ -32,7 +33,6 @@ form>div>input[type="tel"]:focus {
     outline: 0;
     background: white;
 }
-
 
 form>div>input[type="email"]:valid,
 form>div>input[type="text"]:valid,
@@ -55,12 +55,7 @@ form>div>input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) {
     border-width: 2px;
 }
 
-input:not(:placeholder-shown):not(:focus):invalid+.requirements,
-input:placeholder-shown:focus+.requirements+.isEmpty,
-input:placeholder-shown:focus:invalid+.isEmpty
-
-/*last name i address*/
-    {
+input:valid label {
     display: block;
     margin-top: 5px;
     max-height: 200px;
@@ -69,21 +64,16 @@ input:placeholder-shown:focus:invalid+.isEmpty
     background-color: whitesmoke;
 }
 
-/* form .isEmpty {
-    display: none;
-}
-
-form:invalid .isEmpty {
+input:not(:placeholder-shown):not(:focus):invalid+.requirements,
+input:placeholder-shown:focus+.requirements+.isEmpty,
+input:placeholder-shown:focus:invalid+.isEmpty {
     display: block;
-} */
-
-/* form>div>input[type="email"]:invalid:not(:focus):placeholder-shown~.isEmpty {
     margin-top: 5px;
     max-height: 200px;
-    padding: 5px 30px 5px 50px;
+    padding: 5px 30px 5px 20px;
     border-top: 1px dashed black;
     background-color: whitesmoke;
-} */
+}
 
 form div>.requirements,
 form div>.isEmpty {
@@ -92,7 +82,7 @@ form div>.isEmpty {
     max-height: 0;
     transition: 0.25s;
     overflow: hidden;
-    /* font-style: italic; */
+    font-style: italic;
     font-size: 0.8em;
 }
 
@@ -103,61 +93,12 @@ input {
     height: 30px;
 }
 
-/* 
-input:placeholder-shown:not(:focus):invalid {
-    border: 1px solid firebrick;
-} */
-
-/* 
-
-input:required:valid {
-    border-color: green;
-    border-width: 2px;
-}
-
-input:not(:placeholder-shown):invalid {
-    border-color: red;
-} */
-
-/* input:invalid {
-    border-color: red;
-} */
-
-/* #email {
-    background-image: url(email.png);
-    background-position: 4px 2px;
-    background-repeat: no-repeat;
-    background-size: 20px;
-}
-
-#firstname,
-#lastname {
-    background-image: url(name.png);
-    background-position: 4px 2px;
-    background-repeat: no-repeat;
-    background-size: 20px;
-}
-
-#address {
-    background-image: url(home.png);
-    background-position: 4px 2px;
-    background-repeat: no-repeat;
-    background-size: 20px;
-}
-
-#phone {
-    background-image: url(phone.png);
-    background-position: 4px 2px;
-    background-repeat: no-repeat;
-    background-size: 18px;
-}
-
 #signup {
+    margin-top: 20px;
     width: auto;
     height: auto;
     cursor: pointer;
-} */
-
+}
 
 .button {
     background-color: blue;
