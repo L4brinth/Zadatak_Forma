@@ -13,10 +13,13 @@ form {
     max-width: 450px;
 }
 
+div.field {
+    height: 80px;
+}
+
 .label-standard {
     margin-top: 10px;
     display: block;
-    padding-bottom: 3px;
 }
 
 form>div>input[type="email"],
@@ -70,9 +73,6 @@ input:placeholder-shown:focus:invalid+.isEmpty {
     display: block;
     margin-top: 5px;
     max-height: 200px;
-    padding: 5px 30px 5px 20px;
-    border-top: 1px dashed black;
-    background-color: whitesmoke;
 }
 
 form div>.requirements,
